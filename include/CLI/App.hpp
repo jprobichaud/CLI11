@@ -459,7 +459,7 @@ class App {
         opt->default_function([&variable]() { return std::string(CLI::detail::to_string(variable)); });
 
         if(defaulted)
-            opt->capture_default();
+            opt->capture_default_str();
 
         return opt;
     }
@@ -529,7 +529,7 @@ class App {
         });
 
         if(defaulted)
-            opt->capture_default();
+            opt->capture_default_str();
 
         return opt;
     }
